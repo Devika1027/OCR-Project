@@ -1,0 +1,35 @@
+# Python
+myvenv/
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+
+# Temporary folders
+uploads/
+temp/
+output/
+
+# Ignore all PDFs
+*.pdf
+
+# Ignore all OCR text outputs
+*.txt
+
+# Ignore all images
+*.jpg
+*.jpeg
+*.png
+
+# But keep these sample files
+!sample.jpg
+!sample.txt
