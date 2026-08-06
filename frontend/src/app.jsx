@@ -23,7 +23,8 @@ import {
 } from "lucide-react";
 import "./app.css";
 
-const BACKEND_URL = "http://localhost:8000";
+// const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [file, setFile] = useState(null);
@@ -116,6 +117,28 @@ function App() {
 
     setLoading(true);
 
+    //   try {
+    //     const res = await axios.post(`${BACKEND_URL}/extract-text`, formData);
+
+    //     if (res.data && res.data.text !== undefined) {
+    //       setText(res.data.text);
+    //       setTxtFile(res.data.txt_file || "");
+
+    //       if (res.data.text.startsWith("Error extracting text:")) {
+    //         addToast("Extraction failed: backend error", "error");
+    //       } else {
+    //         addToast("Text extracted successfully!", "success");
+    //       }
+    //     } else {
+    //       addToast("Unexpected response from OCR server", "error");
+    //     }
+    //   } catch (error) {
+    //     console.error(error);
+    //     addToast("Failed to connect to backend OCR server", "error");
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
     try {
       const res = await axios.post(`${BACKEND_URL}/extract-text`, formData);
 
@@ -138,6 +161,7 @@ function App() {
       setLoading(false);
     }
   };
+
 
   // Copy text to clipboard
   const copyText = () => {
