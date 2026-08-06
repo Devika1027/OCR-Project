@@ -1,35 +1,49 @@
+# ----------------------------
 # Python
+# ----------------------------
 myvenv/
 venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 
+# ----------------------------
 # Node
+# ----------------------------
 node_modules/
+frontend/dist/
 
-# Environment
+# ----------------------------
+# Environment Variables
+# ----------------------------
 .env
 .env.*
 
+# ----------------------------
 # IDE
+# ----------------------------
 .vscode/
+.idea/
 
-# Temporary folders
-uploads/
-temp/
-output/
+# ----------------------------
+# Runtime / Temporary Files
+# ----------------------------
+backend/uploads/
+backend/output/
+backend/temp/
 
-# Ignore all PDFs
-*.pdf
+# ----------------------------
+# Project Data
+# ----------------------------
+files/
 
-# Ignore all OCR text outputs
-*.txt
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
 
-# Ignore all images
-*.jpg
-*.jpeg
-*.png
-
-# But keep these sample files
-!sample.jpg
-!sample.txt
+# ----------------------------
+# Operating System Files
+# ----------------------------
+.DS_Store
+Thumbs.db
