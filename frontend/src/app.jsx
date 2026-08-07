@@ -362,7 +362,7 @@ function App() {
             <h1 className="brand-title">
               OmniOCR <span style={{ color: "var(--accent-cyan)", fontSize: "14px", fontWeight: "600" }}>STUDIO</span>
             </h1>
-            <p className="brand-tagline">AI-Powered Optical Character Recognition Workspace</p>
+            <p className="brand-tagline">Scan. Extract. Edit.</p>
           </div>
         </div>
       </header>
@@ -373,7 +373,7 @@ function App() {
         <section className="glass-panel">
           <div className="panel-header">
             <h2 className="panel-title">
-              <UploadCloud size={20} /> Input Document
+              <UploadCloud size={20} /> Upload Document
             </h2>
             {file && (
               <span className="badge" style={{ color: "var(--accent-cyan)", borderColor: "rgba(56,189,248,0.3)" }}>
@@ -400,7 +400,7 @@ function App() {
               <div className="dropzone-icon-wrap">
                 <UploadCloud size={32} />
               </div>
-              <h3 className="dropzone-heading">Drop document or image here</h3>
+              <h3 className="dropzone-heading">Drag & drop your file here</h3>
               <p className="dropzone-sub">or click anywhere to browse local files</p>
               <div className="format-badges">
                 <span className="badge">PNG</span>
@@ -474,7 +474,7 @@ function App() {
         <section className="glass-panel">
           <div className="panel-header">
             <h2 className="panel-title">
-              <FileCode size={20} /> Extracted Result
+              <FileCode size={20} /> Extracted Text
             </h2>
 
             {text && (
@@ -535,7 +535,7 @@ function App() {
                 title="Download formatted .txt file"
               >
                 <Download size={14} />
-                <span>Download .TXT</span>
+                <span>Download TXT</span>
               </button>
 
               <button className="tool-btn" onClick={clearAll} title="Clear Workspace" disabled={!text && !file}>
